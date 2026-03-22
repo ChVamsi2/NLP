@@ -1,0 +1,12 @@
+Define input data as a list of sentences.
+Convert all sentences into a list of words using loops.
+Generate bigrams by pairing consecutive words.
+Initialize a dictionary for unigram frequency.
+Use if-else to count each word’s frequency.
+Initialize a dictionary for bigram frequency.
+Use if-else to count each bigram’s frequency.
+Calculate vocabulary size (number of unique words).
+Traverse each bigram.
+Use if-else to check if the word exists.
+Apply Add-One smoothing formula to calculate probability.
+Print each bigram with its probability.
