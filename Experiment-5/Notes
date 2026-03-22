@@ -1,0 +1,8 @@
+Import ngrams function from the nltk library.
+Take a string input from the user.
+Take an integer input value (size of n-gram).
+Split the input string into words.
+Generate n-grams using ngrams(words, value).
+Store the result in a variable.
+Traverse each n-gram in the result.
+Print each n-gram.
