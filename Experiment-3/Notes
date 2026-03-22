@@ -1,0 +1,9 @@
+Import required modules from nltk for stemming, lemmatization, and tokenization.
+Initialize an empty list lis.
+Take the number of words as input from the user.
+Use a loop to take multiple string inputs and store them in the list.
+Create an object of PorterStemmer for stemming.
+Traverse each word in the list.
+Apply stemming to each word and print the result.
+Create an object of WordNetLemmatizer for lemmatization.
+Apply lemmatization to the word "foods" and print the result.
