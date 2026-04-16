@@ -1,32 +1,23 @@
-#porterstemmer
-import nltk
-from nltk.stem import PorterStemmer
-from nltk.stem import LancasterStemmer
-from nltk.stem import RegexpStemmer
-from nltk.stem import SnowballStemmer
-porter = PorterStemmer()
-words = ['Connects','Connecting','Connections','Connected','Connection','Connectings','Connect']
-print("Porter Stemmer:")
-for word in words:
-   print(word,"--->",porter.stem(word))
+import nltk 
+from nltk.stem import PorterStemmer,LancasterStemmer,RegexpStemmer,SnowballStemmer 
 
-#snowballstemmer
-snowball = SnowballStemmer(language='english')
-words = ['generous','generate','generously','generation']
-print("\nSnowball Stemmer:")
-for word in words:
-    print(word,"--->",snowball.stem(word))
 
-#LancasterStemmer
-lancaster = LancasterStemmer()
-words = ['eating','eats','eaten','puts','putting']
-print("\nLancaster Stemmer:")
-for word in words:
-    print(word,"--->",lancaster.stem(word))
+n = int(input("Enter no of inputs: "))
 
-#RegexpStemmer
-regexp = RegexpStemmer('ing$|s$|e$|able$', min=4)
-words = ['mass','was','bee','computer','advisable']
-print("\n Regexp Stemmer:")
-for word in words:
-    print(word,"--->",regexp.stem(word))
+words = []
+print("Enter the words: ")
+for i in range(n):
+    s = input()
+    words.append(s)
+
+
+p = PorterStemmer()
+l = LancasterStemmer()
+s = SnowballStemmer('english')
+r = RegexpStemmer('ing$|e$|s$|able$',min=4)
+
+
+print("Word\t\tPorter\t\tLancaster\tSnowball")
+
+for i in words:
+    print(f"{p.stem(i)}\t\t{l.stem(i)}\t\t{s.stem(i)}\t\t{r.stem(i)}")
